@@ -1,0 +1,21 @@
+int x = 0;
+int y = 0;
+int sat = 7;
+
+void setup() {
+  size(1000, 1000);
+  frameRate(5);
+}
+
+void draw() {
+  while (y < 1000) {
+    
+    if (x > 1000) {
+      x = 0;
+      y += 100;
+    }
+    x += 100;
+    fill(y/sat, 0, x/sat);
+    square(x - 100, y, 100);
+  }
+}
